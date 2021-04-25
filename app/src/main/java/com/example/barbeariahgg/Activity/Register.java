@@ -40,6 +40,7 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        mAuth = FirebaseAuth.getInstance();
         edt_email_register = findViewById(R.id.edt_email_register);
         edt_senha_register = findViewById(R.id.edt_senha_register);
         edt_confirmar_senha_register = findViewById(R.id.edt_confirmar_senha_register);
