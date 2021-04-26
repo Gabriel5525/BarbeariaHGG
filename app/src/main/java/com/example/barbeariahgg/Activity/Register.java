@@ -70,7 +70,7 @@ public class Register extends AppCompatActivity {
                 String registerSenha = edt_senha_register.getText().toString();
                 String registerConfSenha = edt_confirmar_senha_register.getText().toString();
 
-                if (!TextUtils.isEmpty(registerEmail) || !TextUtils.isEmpty(registerSenha) || !TextUtils.isEmpty(registerConfSenha)){
+                if (!TextUtils.isEmpty(registerEmail) && !TextUtils.isEmpty(registerSenha) && !TextUtils.isEmpty(registerConfSenha)){
                     if (registerSenha.equals(registerConfSenha)){
                         loginProgressBar_register.setVisibility(View.VISIBLE);
                         mAuth.createUserWithEmailAndPassword(registerEmail,registerSenha).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
