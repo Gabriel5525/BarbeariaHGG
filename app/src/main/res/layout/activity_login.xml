@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@drawable/backgroud"
+    android:background="@drawable/plano_fundo"
     tools:context=".Activity.Login">
 
 
@@ -18,7 +18,7 @@
         android:textSize="40sp"
         android:layout_marginBottom="120dp"
         android:textAlignment="center"/>
-    
+
     <EditText
         android:id="@+id/edt_email"
         android:layout_width="380dp"
@@ -37,8 +37,8 @@
         android:hint="Senha"
         android:inputType="textPassword"
         android:textColorHint="@color/white"
-        android:textColor="@color/white"
         android:backgroundTint="@color/white"
+        android:textColor="@color/white"
         android:layout_marginTop="10dp"/>
 
     <CheckBox
