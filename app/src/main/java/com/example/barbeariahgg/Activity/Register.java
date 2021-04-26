@@ -91,6 +91,9 @@ public class Register extends AppCompatActivity {
                         Toast.makeText(Register.this, "A senha deve ser a mesma!", Toast.LENGTH_SHORT).show();
                     }
                 }
+                else{
+                    Toast.makeText(Register.this, "Informações inválidas", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
