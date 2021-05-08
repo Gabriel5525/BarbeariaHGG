@@ -52,22 +52,22 @@
         android:layout_marginTop="10dp"/>
 
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_registrar_register"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:textColor="@color/white"
-        android:background="@android:color/holo_blue_light"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:text="Registrar"
+        style="@style/loginButton"
+        android:textColor="@color/white" />
 
     <Button
-        android:id="@+id/btn_registrar"
+        android:id="@+id/btn_login_register"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_blue_dark"
-        android:text="Registrar"
-        android:textColor="@color/white"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:text="Login"
+        style="@style/registerButton"
+        android:textColor="@color/white" />
 
     <ProgressBar
         android:id="@+id/loginProgressBar"

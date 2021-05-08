@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.example.barbeariahgg.MainActivity;
 import com.example.barbeariahgg.R;
+import com.example.barbeariahgg.model.UserModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -27,6 +28,7 @@ public class Register extends AppCompatActivity {
 
     private EditText edt_email_register;
     private EditText edt_senha_register;
+    private EditText edt_name_register;
     private EditText edt_confirmar_senha_register;
     private CheckBox ckb_mostrar_senha_register;
     private Button btn_registrar_register;
@@ -42,6 +44,7 @@ public class Register extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         edt_email_register = findViewById(R.id.edt_email_register);
+        edt_name_register = findViewById(R.id.edt_name_register);
         edt_senha_register = findViewById(R.id.edt_senha_register);
         edt_confirmar_senha_register = findViewById(R.id.edt_confirmar_senha_register);
         ckb_mostrar_senha_register = findViewById(R.id.ckb_mostrar_senha_register);
@@ -66,17 +69,24 @@ public class Register extends AppCompatActivity {
         btn_registrar_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String registerEmail = edt_email_register.getText().toString();
+
+                UserModel userModel = new UserModel();
+
+                userModel.setEmail(edt_email_register.getText().toString());
+                userModel.setNome(edt_name_register.getText().toString());
                 String registerSenha = edt_senha_register.getText().toString();
                 String registerConfSenha = edt_confirmar_senha_register.getText().toString();
 
-                if (!TextUtils.isEmpty(registerEmail) && !TextUtils.isEmpty(registerSenha) && !TextUtils.isEmpty(registerConfSenha)){
+                if (!TextUtils.isEmpty(userModel.getEmail()) && !TextUtils.isEmpty(registerSenha) &&
+                        !TextUtils.isEmpty(registerConfSenha) && !TextUtils.isEmpty(userModel.getNome())){
                     if (registerSenha.equals(registerConfSenha)){
                         loginProgressBar_register.setVisibility(View.VISIBLE);
-                        mAuth.createUserWithEmailAndPassword(registerEmail,registerSenha).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        mAuth.createUserWithEmailAndPassword(userModel.getEmail(),registerSenha).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
+                                    userModel.setId(mAuth.getUid());
+                                    userModel.salvar();
                                     abrirTelaPrincipal();
                                 }
                                 else{

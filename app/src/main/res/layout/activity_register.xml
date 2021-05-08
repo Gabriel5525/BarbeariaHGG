@@ -19,6 +19,16 @@
         android:textSize="40sp" />
 
     <EditText
+        android:id="@+id/edt_name_register"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:hint="Nome Completo"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
+    <EditText
         android:id="@+id/edt_email_register"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
@@ -65,8 +75,8 @@
         android:layout_width="380dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:background="@android:color/holo_blue_light"
         android:text="Registrar"
+        style="@style/loginButton"
         android:textColor="@color/white" />
 
     <Button
@@ -74,8 +84,8 @@
         android:layout_width="380dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:background="@android:color/holo_blue_dark"
         android:text="Login"
+        style="@style/registerButton"
         android:textColor="@color/white" />
 
     <ProgressBar
