@@ -52,7 +52,7 @@
         android:layout_marginTop="10dp"/>
 
     <Button
-        android:id="@+id/btn_registrar_register"
+        android:id="@+id/btn_registrar"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -61,7 +61,7 @@
         android:textColor="@color/white" />
 
     <Button
-        android:id="@+id/btn_login_register"
+        android:id="@+id/btn_login"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
