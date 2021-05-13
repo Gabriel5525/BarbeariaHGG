@@ -1,214 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#ACA9A9">
+    android:layout_height="match_parent"
+    android:background="@drawable/plano_fundo"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".Activity.Appointment">
 
-    <LinearLayout
+
+    <!--        <CalendarView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="320dp"-->
+    <!--            android:background="@color/white"-->
+    <!--            android:selectedWeekBackgroundColor="#D61818"-->
+    <!--            android:weekNumberColor="#FFFFFF"-->
+    <!--            android:weekSeparatorLineColor="#97031067" />-->
+
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="733dp"
-        android:background="@color/black"
-        android:gravity="center|top"
-        android:orientation="vertical"
-        android:padding="20dp"
-        tools:context=".Activity.Login">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Escolha uma Data"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
 
+    <DatePicker
+        android:id="@+id/date_agendamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#D63434"
+        android:backgroundTint="#FFFFFF"
+        android:calendarTextColor="#FFFFFF"
+        android:calendarViewShown="false"
+        android:colorControlNormal="#FFFFFF"
+        android:datePickerMode="spinner" />
 
-        <!--        <CalendarView-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="320dp"-->
-        <!--            android:background="@color/white"-->
-        <!--            android:selectedWeekBackgroundColor="#D61818"-->
-        <!--            android:weekNumberColor="#FFFFFF"-->
-        <!--            android:weekSeparatorLineColor="#97031067" />-->
+    <TextView
+        android:id="@+id/textView_hora"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Escolha uma Hora"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:text="Escolha uma Data"
-            android:textAlignment="viewStart"
-            android:textColor="@color/white"
-            android:textSize="30sp" />
+    <ListView
+        android:id="@+id/lst_horarios"
+        android:layout_width="wrap_content"
+        android:layout_height="210dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:choiceMode="multipleChoice"
+        android:background="@color/white"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        />
 
-        <DatePicker
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#D63434"
-            android:backgroundTint="#2D2F31"
-            android:calendarTextColor="#FFFFFF"
-            android:calendarViewShown="false"
-            android:colorControlNormal="#AE9F9F"
-            android:datePickerMode="spinner" />
+    <Button
+        android:id="@+id/btn_agendar"
+        style="@style/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Agendar" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:text="Escolha uma Hora"
-            android:textAlignment="viewStart"
-            android:textColor="@color/white"
-            android:textSize="30sp" />
+    <ProgressBar
+        android:id="@+id/loginProgressBar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/white"
+        android:visibility="invisible" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/btn_hour_8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:backgroundTint="#3ABC24"
-                android:text="08:00"
-                android:textColor="#000000" />
-
-            <Button
-                android:id="@+id/btn_hour_9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:background="#FFFFFF"
-                android:backgroundTint="#3ABC24"
-                android:text="09:00"
-                android:textColor="#000000" />
-
-            <Button
-                android:id="@+id/btn_hour_10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:background="#FFFFFF"
-                android:backgroundTint="#3ABC24"
-                android:text="10:00"
-                android:textColor="#000000" />
-
-            <Button
-                android:id="@+id/btn_hour_11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:background="#FFFFFF"
-                android:backgroundTint="#3ABC24"
-                android:text="11:00"
-                android:textColor="#000000" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/btn_hour_12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:backgroundTint="#3ABC24"
-                android:text="12:00"
-                android:textColor="#000000" />
-
-            <Button
-                android:id="@+id/btn_hour_13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:background="#FFFFFF"
-                android:backgroundTint="#3ABC24"
-                android:text="13:00"
-                android:textColor="#000000" />
-
-            <Button
-                android:id="@+id/btn_hour_14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:background="@android:color/holo_blue_light"
-                android:text="14:00"
-                android:textColor="#000000" />
-
-            <Button
-                android:id="@+id/btn_hour_15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:background="#FFFFFF"
-                android:backgroundTint="#3ABC24"
-                android:text="15:00"
-                android:textColor="#000000" />
-
-        </LinearLayout>
-
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/btn_hour_16"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:backgroundTint="#3ABC24"
-                android:text="16:00"
-                android:textColor="#000000" />
-
-            <Button
-                android:id="@+id/btn_hour_17"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:background="#FFFFFF"
-                android:backgroundTint="#3ABC24"
-                android:text="17:00"
-                android:textColor="#000000" />
-
-            <Button
-                android:id="@+id/btn_hour_18"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:background="#FFFFFF"
-                android:backgroundTint="#3ABC24"
-                android:text="18:00"
-                android:textColor="#000000" />
-
-            <Button
-                android:id="@+id/btn_hour_19"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:background="#FFFFFF"
-                android:backgroundTint="#3ABC24"
-                android:text="19:00"
-                android:textColor="#000000" />
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/btn_registrar_register2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:background="@android:color/holo_blue_light"
-            android:text="Agendar"
-            android:textColor="@color/white" />
-
-        <ProgressBar
-            android:id="@+id/loginProgressBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:indeterminate="true"
-            android:indeterminateTint="@color/white"
-            android:visibility="invisible" />
-
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
