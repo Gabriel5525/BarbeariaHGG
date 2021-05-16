@@ -27,16 +27,20 @@
         android:textColor="@color/white"
         android:textSize="30sp" />
 
-    <DatePicker
-        android:id="@+id/date_agendamento"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/buttonDatePicker"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:background="#D63434"
-        android:backgroundTint="#FFFFFF"
-        android:calendarTextColor="#FFFFFF"
-        android:calendarViewShown="false"
-        android:colorControlNormal="#FFFFFF"
-        android:datePickerMode="spinner" />
+        android:text="JAN 01 2020"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        style="?android:spinnerStyle"
+        android:textAlignment="center"
+        android:background="@color/white"
+        android:onClick="openDataPicker"
+
+        >
+    </Button>
 
     <TextView
         android:id="@+id/textView_hora"
@@ -49,7 +53,18 @@
         android:textColor="@color/white"
         android:textSize="30sp" />
 
-    <ListView
+    <Spinner
+        android:id="@+id/spinner_horario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:background="@color/white"
+        android:layout_marginBottom="10dp"
+        ></Spinner>
+<!--    <ListView
         android:id="@+id/lst_horarios"
         android:layout_width="wrap_content"
         android:layout_height="210dp"
@@ -60,7 +75,7 @@
         android:background="@color/white"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        />
+        />-->
 
     <Button
         android:id="@+id/btn_agendar"

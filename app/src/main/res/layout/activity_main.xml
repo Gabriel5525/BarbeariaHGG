@@ -21,16 +21,19 @@
         />
 
     <ListView
-        android:id="@+id/lst_discipl"
-        android:layout_width="match_parent"
-        android:layout_height="140dp"
+        android:id="@+id/lst_agendamentos"
+        android:layout_width="wrap_content"
+        android:layout_height="130dp"
         android:layout_marginTop="120dp"
         android:padding="10dp"
+        android:gravity="center"
+        android:textAlignment="center"
         android:textColor="@color/black"
-        android:choiceMode="multipleChoice"
         android:background="@color/white"
         android:layout_marginEnd="10dp"
+        android:textSize="16sp"
         android:layout_marginBottom="10dp"
+        android:longClickable="true"
         />
 
     <Button
@@ -40,7 +43,7 @@
         android:text="Fazer Novo Agendamento"
         android:layout_centerInParent="true"
         android:textColor="@color/white"
-        android:layout_below="@id/lst_discipl"
+        android:layout_below="@id/lst_agendamentos"
         style="@style/loginButton"/>
 
 </RelativeLayout>
